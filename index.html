@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <script async src="scripts/renderlib.js"></script>
+    <script async defer src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+    <title>HTTP5302 Coding Challenge</title>
+</head>
+    <body>
+        <div id="titlediv">
+            <h1 id="maintitle" onclick="resetMainCanvas(event)">Meet Our Team</h1>
+        </div>
+        <div id="menudiv">
+            <div class="menuitem" id="resetoptiondiv">
+                <fieldset>
+                    <legend>Display All Team Members</legend>
+                    <button type="button" onclick="resetMainCanvas(event)">Display All</button>
+                </fieldset>
+            </div>  
+            <div class="menuitem" id="namesmenucanvas"></div>
+            <div class="menuitem" id="rolesmenucanvas"></div>
+        </div>
+        <div id="maindiv">
+            <div id="maincanvas"></div>
+        </div>
+    </body>
+</html>

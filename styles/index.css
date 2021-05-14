@@ -1,0 +1,120 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', arial, sans-serif;
+	line-height: 1.2;
+	font-size: 16px;
+}
+
+button {
+    margin-top: 10px; 
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    font-size: .9rem;
+}
+
+#titlediv {
+    background-color: #2a52be;
+    padding: 20px;
+}
+
+#maintitle {
+    width:fit-content;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#maintitle:hover {
+    cursor: pointer;
+}
+
+fieldset {
+    color: white;
+    border-color: white;
+}
+
+#menudiv {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #2a52be;
+    padding: 20px;
+}
+
+.menuitem {
+    margin-bottom: 1rem;
+}
+
+#maindiv {
+    width: 74%;
+    display: inline-block;
+    padding: 2% 0 0 2%;
+}
+
+#employeenames {
+    margin: 2% 0 2% 0;
+}
+
+#maincanvas {
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3));
+}
+
+.carddiv {
+    width: 20vw;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 1% 3% 3% 3%;
+}
+
+.crowndiv {
+    height: 1rem;
+}
+
+.crowndiv p {
+    margin: 0;
+    float: right;
+}
+
+.sr_crowndiv {
+    position: absolute;
+    left: 15000px;
+}
+
+.picdiv {
+    width: 50%;
+    overflow: hidden;
+    margin: 7.5% auto;
+}
+
+.picdiv img {
+    width: 100%;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.namediv {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.rolediv {
+    border: 1px solid black;
+    display: inline-block;
+    padding: 1.2% 6% 1.2% 6%;
+    font-size: .8rem;
+    margin-right: .5rem;
+}
+
+.rolediv p {
+    -webkit-text-stroke: .75px black;
+    margin: 0;
+}
