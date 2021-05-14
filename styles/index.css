@@ -47,6 +47,7 @@ fieldset {
     vertical-align: top;
     background-color: #2a52be;
     padding: 20px;
+    height: 100vh;
 }
 
 .menuitem {
