@@ -67,9 +67,9 @@ fieldset {
 
 #maincanvas {
     display: grid;
-    grid-template-columns: repeat(3, calc(90% / 3));
-    grid-auto-rows:auto;
-    gap: 2.5%, 1.5rem;
+    grid-template-columns: repeat(4, 22%);
+    grid-auto-rows: 1fr;
+    gap: 1rem;
     justify-content: space-evenly;
 }
 
