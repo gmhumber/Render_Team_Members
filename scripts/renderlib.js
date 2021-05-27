@@ -17,6 +17,7 @@ function generateCard(teamMemberObject) {
 
     let card = `<div class="carddiv" id="carddiv_${employeeId}">`;
 
+    // Add a crown to the employee's card if they are featured
     if (teamMemberObject.employeeisfeatured === "1") {
         card += `<div class="crowndiv" id="crowndiv_${employeeId}"><p>&#128081</p></div>`;
         card += `<div class="sr_crowndiv" id="sr_crowndiv_${employeeId}"><p>${employeeName} is a featured employee</p></div>`;
@@ -24,6 +25,7 @@ function generateCard(teamMemberObject) {
         card += `<div class="crowndiv"></div>`;
     }
 
+    // Insert employee pic if there is one, otherwise use the standard no-image placeholder
     if (teamMemberObject.employeehaspic === "1") {
         card += `<div class="picdiv" id="picdiv_${employeeId}"><img src="http://sandbox.bittsdevelopment.com/code1/employeepics/${employeeId}.jpg" alt="image of ${employeeName}" /></div>`;
     } else {
@@ -36,6 +38,7 @@ function generateCard(teamMemberObject) {
 
     card += `<div class="rolesdiv" id="rolesdiv_${employeeId}">`;
 
+    // This loop interates over all of the employee roles and outputs the HTML/CSS code for each role
     for (let i = 0; i < employeeRoles.length; i++) {
         card += `<div class="rolediv" style="color:white; background-color:${employeeRoles[i].rolecolor}"><p>${employeeRoles[i].rolename}</p></div>`;
     };
@@ -69,7 +72,8 @@ function displayAllMembersAndNamesMenu(mainCanvasContainer, namesCanvasContainer
                                     </div>
                                     <div>
                                         <select name="employeename" id="employeenames">`;
-        
+            
+            // Iterate over each employee member to extract the employee id and name info for use to construct the employee selection drop down list
             Object.entries(allMembersObject).forEach(([key, value]) => {
                 const card = generateCard(value);
                 
@@ -108,6 +112,7 @@ function displayAllMembers(container) {
 
             let cards = "";
         
+            // Iterate over all employees and construct the HTML code for each person's card by using the generateCard() function
             Object.entries(allMembersObject).forEach(([key, value]) => {
                 const card = generateCard(value);
                 cards += card;
@@ -136,6 +141,7 @@ function displayOneMemberById(container, id) {
 
             let card = "";
 
+            // Iterate over the employees' data to find the selected person by id, then generate the HTML card for that person 
             Object.entries(allMembersObject).forEach(([key, value]) => {
                 if (value.employeeid === id) {
                     card = generateCard(value);                    
@@ -167,6 +173,7 @@ function displayMembersByRoles(container, rolesIdArray) {
 
             let cards = "";
         
+            //Iternate over the returned employees data and generate the HTML code for a card for each person
             Object.entries(responseMembersObject).forEach(([key, value]) => {
                 const card = generateCard(value);
                 cards += card;
@@ -194,7 +201,8 @@ function displayRolesSelectMenu(container) {
             let rolesMenu = `<form action="#" method="GET">
                                 <fieldset>
                                     <legend>Find Team Members By Roles</legend>`;
-        
+            
+            // Loop over the array of roles and extract the role id and role name to constuct the checkbox menu
             rolesArray.forEach((roleObject) => {
                 rolesMenu += `<div>
                                 <input type="checkbox" id="roleid_${roleObject.roleid}" name="selectedroles" value="${roleObject.roleid}">

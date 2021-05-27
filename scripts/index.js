@@ -19,12 +19,14 @@ function rolesFormHandler(event) {
     const checkboxList = document.getElementsByName("selectedroles");
     let rolesIdArray = [];
     
+    //Loop over the checkbox values to see which ones were checked by the user and store the checkbox values in an array
     checkboxList.forEach((checkboxElement) => {
         if (checkboxElement.checked === true) {
             rolesIdArray.push(checkboxElement.value);
         }
     });
     
+    //Fetch the employees by role only if the user has actually made checkbox selections
     if (rolesIdArray.length > 0) {
         displayMembersByRoles(mainCanvasElement, rolesIdArray);    
     };
