@@ -114,10 +114,52 @@ fieldset {
     display: inline-block;
     padding: 1.2% 6% 1.2% 6%;
     font-size: .8rem;
-    margin-right: .5rem;
+    margin: .2rem .5rem .2rem 0;
 }
 
 .rolediv p {
     -webkit-text-stroke: .75px black;
     margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+
+    #menudiv {
+        width: 30%;
+        height: 100%;
+    }
+
+    #maindiv {
+        width: 69%;
+    }
+
+    #maincanvas {
+        display: grid;
+        grid-template-columns: repeat(2, 45%);
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+        justify-content:space-evenly;
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    #menudiv {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #maindiv {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #maincanvas {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+        justify-content:center;
+    }
 }

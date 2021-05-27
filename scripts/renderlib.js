@@ -12,7 +12,7 @@ function generateCard(teamMemberObject) {
 
     const employeeId = teamMemberObject.employeeid;
     const employeeName = `${teamMemberObject.employeefname} ${teamMemberObject.employeelname}`;
-    const employeeBio = teamMemberObject.employeebio;
+    const employeeBio = teamMemberObject.employeebio.length > 0 ? teamMemberObject.employeebio : "No bio available";
     const employeeRoles = teamMemberObject.roles;
 
     let card = `<div class="carddiv" id="carddiv_${employeeId}">`;
