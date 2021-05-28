@@ -38,5 +38,7 @@ function makeXhrRequest(url, callback = null, method = 'GET', expectedResponseTy
 
     xhr.send();
 
+    return xhr.responseText;
+
 };
 

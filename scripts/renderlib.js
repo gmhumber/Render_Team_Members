@@ -222,3 +222,31 @@ function displayRolesSelectMenu(container) {
         });
 
 }
+
+
+// This function fetches all of the team memebers data from the server and then generates an HTML card for every member that is featured.
+// @param container - the DOM container element into which the HTML code of the cards will be injected.
+function displayFeaturedMembers(container) {
+
+    fetch('http://sandbox.bittsdevelopment.com/code1/fetchemployees.php')
+        .then((response) => {
+            return response.json();
+        })
+        .then((allMembersObject) => {
+
+            let card = "";
+
+            // Iterate over the employees' data to find featured employees, then generate the HTML card for that person 
+            Object.entries(allMembersObject).forEach(([key, value]) => {
+                if (value.employeeisfeatured === "1") {
+                    card = generateCard(value);                    
+                }
+            });
+        
+            container.innerHTML = card;
+
+        })
+        .catch((err) => {
+            console.log(err)
+        });
+};

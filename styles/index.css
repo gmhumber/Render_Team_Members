@@ -22,7 +22,7 @@ button {
 }
 
 #titlediv {
-    background-color: #2a52be;
+    background-color: #0275d8;
     padding: 20px;
 }
 
@@ -43,10 +43,10 @@ fieldset {
 }
 
 #menudiv {
-    width: 25%;
+    width: 18%;
     display: inline-block;
     vertical-align: top;
-    background-color: #2a52be;
+    background-color: #0275d8;
     padding: 20px;
     height: 100vh;
 }
@@ -121,6 +121,51 @@ fieldset {
     -webkit-text-stroke: .75px black;
     margin: 0;
 }
+
+.biodiv {
+    margin: 1rem 0 2rem 0;
+}
+
+.biodiv p {
+    min-height: 7.7rem;
+    max-height: 7.7rem;
+    overflow: auto;
+}
+
+.biodiv p:hover {
+    max-height: max-content;
+    overflow: auto;
+}
+
+button {
+    background: white;
+    color: #0275d8;
+    padding: 0.5rem;
+    margin: .5rem auto .5rem auto;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #c9cdcf;
+}
+
+#employeenames {
+    padding: 0.5rem;
+    border: none;
+    color:#0275d8;
+    margin: .5rem 0 .5rem 0;
+}
+
+fieldset {
+    border-radius: 1rem;
+}
+
+legend {
+    margin-bottom: .5rem;
+}
+
 
 @media screen and (max-width: 1200px) {
 

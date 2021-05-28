@@ -56,3 +56,12 @@ function resetMainCanvas(event) {
     displayAllMembers(mainCanvasElement);
 
 }
+
+// This function is designed to be triggered by an event listener set on a button. Whenever the listener is triggered, this function will repaint the webpage with the info cards of all team members that are featured.
+// @param event - the event object of the event that triggered the listener.
+function requestFeaturedMembers(event) {
+
+    event.preventDefault();
+    displayFeaturedMembers(mainCanvasElement);
+
+}
