@@ -234,16 +234,16 @@ function displayFeaturedMembers(container) {
         })
         .then((allMembersObject) => {
 
-            let card = "";
+            let cards = "";
 
             // Iterate over the employees' data to find featured employees, then generate the HTML card for that person 
             Object.entries(allMembersObject).forEach(([key, value]) => {
                 if (value.employeeisfeatured === "1") {
-                    card = generateCard(value);                    
+                    cards += generateCard(value);                    
                 }
             });
         
-            container.innerHTML = card;
+            container.innerHTML = cards;
 
         })
         .catch((err) => {
